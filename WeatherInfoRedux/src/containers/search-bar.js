@@ -15,7 +15,6 @@ class SearchBar extends Component {
 
 	onInputChange(evt) {
 		this.setState({'term': evt.target.value});
-		console.log(this.state.term);
 	}
 
 	onFormSubmit(evt){
@@ -28,7 +27,7 @@ class SearchBar extends Component {
 		return (
 			<div>
 				<form onSubmit={this.onFormSubmit}>
-					<input 
+					<input value={this.state.term}
 						onChange = { this.onInputChange }
 						placeholder = "Enter the city"/>
 					<button>Search</button>
